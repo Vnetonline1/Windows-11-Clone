@@ -109,7 +109,7 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
           direction='row'
           flexWrap='wrap'
           sx={{
-            maxHeight: '33vh',
+            maxHeight: '30vh',
             mb: 3,
             overflow: 'scroll',
             [theme.breakpoints.up('md')]: {
@@ -243,10 +243,10 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
             ))
           }
         </Grid>
-      </Box>
+      </Box >
 
       {/* User Data Section */}
-      <Stack
+      < Stack
         justifyContent='center'
         sx={{
           px: 3,
@@ -294,8 +294,8 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
             <PowerSettingsNewIcon fontSize='small' />
           </IconButton>
         </Stack>
-      </Stack>
-    </Stack>
+      </Stack >
+    </Stack >
   )
 
   return (

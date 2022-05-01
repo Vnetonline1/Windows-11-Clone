@@ -13,6 +13,7 @@ const Home = () => {
       background: `url(${Background})`,
       backgroundPosition: 'center',
       backgroundSize: 'cover',
+      position: 'fixed'
     }}>
       <Box sx={{
         height: '100%'
