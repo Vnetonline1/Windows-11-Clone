@@ -21,7 +21,8 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
         justifyContent: 'space-between',
         px: {
           xs: 2,
-          lg: 4
+          lg: 4,
+          maxHeight: '5vh'
         },
         mb: 2
       }}
@@ -51,8 +52,8 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
   const MenuContent = () => (
     <Stack sx={{
       width: '94vw',
-      height: '94vh',
-      [theme.breakpoints.up('md')]: {
+      height: '85vh',
+      [theme.breakpoints.up('sm')]: {
         width: 640,
         height: '100%',
         maxHeight: '94vh',
@@ -64,7 +65,12 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
         sx={{
           flex: 1,
           p: 3,
-          border: '1px solid #525252'
+          border: '1px solid #525252',
+          maxHeight: '78vh',
+          [theme.breakpoints.up('sm')]: {
+            maxHeight: '94vh',
+            overflow: 'scroll'
+          }
         }}
       >
         {/* Search Bar */}
@@ -90,7 +96,8 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
           sx={{
             pb: {
               xs: 2,
-              lg: 4
+              lg: 4,
+              maxHeight: '7vh'
             },
             "& .MuiFilledInput-root": {
               background: 'rgba(0,0,0,0.3)'
@@ -109,15 +116,14 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
           direction='row'
           flexWrap='wrap'
           sx={{
-            maxHeight: '30vh',
+            maxHeight: '31vh',
             mb: 3,
             overflow: 'scroll',
-            [theme.breakpoints.up('md')]: {
+            [theme.breakpoints.up('sm')]: {
               overflow: 'scroll',
               justifyContent: 'flex-start',
               mb: 3,
-              height: '100%',
-              maxHeight: '32vh'
+              height: '100%'
             }
           }}
         >
@@ -174,10 +180,10 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
           justifyContent='flex-start'
           spacing={2}
           sx={{
-            maxHeight: '25vh',
+            maxHeight: '21vh',
             px: 2,
             overflow: 'scroll',
-            [theme.breakpoints.up('md')]: {
+            [theme.breakpoints.up('sm')]: {
               overflow: 'scroll',
               px: 2,
               height: '100%',
@@ -256,6 +262,7 @@ const Menu = ({ open, anchorEl, onClose }: PopoverProps) => {
           borderTop: 'none',
           borderBottomLeftRadius: 5,
           borderBottomRightRadius: 5,
+          maxHeight: '7vh'
         }}
       >
         <Stack
