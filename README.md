@@ -8,7 +8,7 @@
 
 ![Demonstration](https://github.com/LeoHPC/Windows-11-Clone/blob/main/demos/demo%202.png)
 
-### The goal of this project was recreate the windows 11 interface usign Next.js + Material UI, to improve, mainly, my knowledges in Next.js, Material UI, typescript and drag and drop (React DnD) operations.
+### The goal of this project was recreate the windows 11 interface using Next.js + Material UI, to improve, mainly, my knowledges in Next.js, Material UI, typescript and drag and drop (React DnD) operations.
 
 ## :computer: Technologies :computer:
 
@@ -22,7 +22,7 @@ To this project, I used the following technologies:
 
 ## :star: Project already finished! :star:
 
-The project is already finished! Test it whatever you want!
+The project is already finished! Test at will!
 
 ## :iphone: How to test it? :iphone:
 
