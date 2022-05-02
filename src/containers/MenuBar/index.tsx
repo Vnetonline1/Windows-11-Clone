@@ -1,5 +1,5 @@
 import { Box, ImageList, ImageListItem, Stack, Typography } from "@mui/material";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import MenuButton from "../../components/MenuButton";
 import { menuIcon, taskbarApps } from "../../utils/apps";
