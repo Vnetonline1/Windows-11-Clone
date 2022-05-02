@@ -8,6 +8,10 @@
 
 ![Demonstration](https://github.com/LeoHPC/Windows-11-Clone/blob/main/demos/demo%202.png)
 
+## Drag and drop operation:
+
+![Demonstration](https://github.com/LeoHPC/Windows-11-Clone/blob/main/demos/demo3.gif)
+
 ### The goal of this project was recreate the windows 11 interface using Next.js + Material UI, to improve, mainly, my knowledges in Next.js, Material UI, typescript and drag and drop (React DnD) operations.
 
 ## :computer: Technologies :computer:
