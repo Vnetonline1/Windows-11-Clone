@@ -1,21 +1,15 @@
 import { Box, ImageList, ImageListItem, Stack, Typography } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import MenuButton from "../../components/MenuButton";
 import { menuIcon, taskbarApps } from "../../utils/apps";
 import Menu from "../Menu";
 
-interface InitialProps {
-  numberOfApps: number;
-  currentDate: string;
-  currentTime: string
-}
+export default function MenuBar() {
 
-export default function MenuBar({ numberOfApps, currentDate, currentTime }: InitialProps) {
-
-  /* const [numberOfApps, setNumberOfApps] = useState(0);
+  const [numberOfApps, setNumberOfApps] = useState(0);
   const [currentDate, setCurrentDate] = useState('');
-  const [currentTime, setCurrentTime] = useState(''); */
+  const [currentTime, setCurrentTime] = useState('');
   const [anchorEl, setAnchorEl] = useState(undefined);
   const open = Boolean(anchorEl);
 
@@ -27,7 +21,7 @@ export default function MenuBar({ numberOfApps, currentDate, currentTime }: Init
     setAnchorEl(undefined);
   }
 
-  /* useEffect(() => {
+  useEffect(() => {
     setNumberOfApps(taskbarApps.length);
 
     const date = new Date().toLocaleDateString('pt-BR', {
@@ -43,7 +37,7 @@ export default function MenuBar({ numberOfApps, currentDate, currentTime }: Init
     var currentMinutes = String(time.getMinutes());
     if (Number(currentMinutes) < 10) currentMinutes = '0' + currentMinutes;
     setCurrentTime(`${currentHours}:${currentMinutes}`);
-  }, []); */
+  }, []);
 
   return (
     <Box sx={(theme) => ({
@@ -144,29 +138,3 @@ export default function MenuBar({ numberOfApps, currentDate, currentTime }: Init
     </Box>
   );
 };
-
-export async function getServerSideProps() {
-  const numberOfApps = taskbarApps.length;
-
-  const date = new Date();
-
-  const currentDate = date.toLocaleDateString('pt-BR', {
-    day: '2-digit',
-    month: '2-digit',
-    year: 'numeric'
-  })
-
-  var currentHours = String(date.getHours());
-  if (Number(currentHours) < 10) currentHours = '0' + currentHours;
-  var currentMinutes = String(date.getMinutes());
-  if (Number(currentMinutes) < 10) currentMinutes = '0' + currentMinutes;
-  const currentTime = `${currentHours}:${currentMinutes}`;
-
-  return {
-    props: {
-      numberOfApps,
-      currentDate,
-      currentTime
-    },
-  }
-}
