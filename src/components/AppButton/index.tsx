@@ -2,7 +2,7 @@ import { Button, Stack, Typography } from "@mui/material";
 import { useDrag } from "react-dnd";
 
 interface AppProps {
-  id: any;
+  id: string;
   left: number;
   top: number;
   name: string;

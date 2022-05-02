@@ -1,10 +1,15 @@
+import { Box } from "@mui/material";
 import { useCallback, useEffect, useState } from "react";
 import { useDrop } from "react-dnd";
 
-import { Box } from "@mui/material";
 import AppButton from "../../components/AppButton";
-
 import { desktopApps } from "../../utils/apps";
+
+interface AppProps {
+  id: string;
+  top: number;
+  left: number;
+}
 
 const Apps = () => {
 
@@ -25,7 +30,7 @@ const Apps = () => {
     setApps(_apps);
   }, []);
 
-  const moveApp = useCallback((id: any, left: number, top: number) => {
+  const moveApp = useCallback((id: string, left: number, top: number) => {
     setApps((old: any) => {
       const _apps: any = { ...old };
       _apps[id] = { ..._apps[id], left, top };
@@ -37,7 +42,7 @@ const Apps = () => {
   const [, drop] = useDrop(
     () => ({
       accept: 'box',
-      drop(item: any, monitor) {
+      drop(item: AppProps, monitor) {
         const delta = monitor.getDifferenceFromInitialOffset();
         if (delta) {
           const left = Math.round(item.left + delta.x);

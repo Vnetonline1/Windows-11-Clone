@@ -1678,9 +1678,9 @@ next-images@^1.8.4:
     file-loader "^6.2.0"
     url-loader "^4.1.0"
 
-next@12.1.5:
+next@^12.1.5:
   version "12.1.5"
-  resolved "https://registry.npmjs.org/next/-/next-12.1.5.tgz"
+  resolved "https://registry.yarnpkg.com/next/-/next-12.1.5.tgz#7a07687579ddce61ee519493e1c178d83abac063"
   integrity sha512-YGHDpyfgCfnT5GZObsKepmRnne7Kzp7nGrac07dikhutWQug7hHg85/+sPJ4ZW5Q2pDkb+n0FnmLkmd44htIJQ==
   dependencies:
     "@next/env" "12.1.5"

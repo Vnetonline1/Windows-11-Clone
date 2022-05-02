@@ -10,7 +10,7 @@ export default function MenuBar() {
   const [numberOfApps, setNumberOfApps] = useState(0);
   const [currentDate, setCurrentDate] = useState('');
   const [currentTime, setCurrentTime] = useState('');
-  const [anchorEl, setAnchorEl] = useState(undefined);
+  const [anchorEl, setAnchorEl] = useState();
   const open = Boolean(anchorEl);
 
   const handleClick = (event: any) => {
